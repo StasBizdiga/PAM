@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
             Bundle extras = data.getExtras();
             imageBitmap = (Bitmap) extras.get("data");
             photoTaken = true;
+            ImageView photo = (ImageView) findViewById(R.id.photo);
+            photo.setImageBitmap(imageBitmap);
         }
     }
 
@@ -44,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         final Button searchButton = (Button) findViewById(R.id.button2);
         final Button cameraButton = (Button) findViewById(R.id.button3);
         final Button extraButton = (Button) findViewById(R.id.button4);
-        final ImageView photo = (ImageView) findViewById(R.id.photo);
         final RadioGroup typeOfCam = (RadioGroup) findViewById(R.id.camType);
         final Toast toast = Toast.makeText(context, "10s passed!", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER,0,0);
@@ -108,7 +109,11 @@ public class MainActivity extends AppCompatActivity {
         extraButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(photoTaken)
-                {photo.setImageBitmap(imageBitmap);}
+                {
+                    Intent intent = new Intent(MainActivity.this, Preview.class);
+                    intent.putExtra("pic", imageBitmap);
+                    startActivity(intent);
+                }
                 else{Toast.makeText(context, "Take a photo first!", Toast.LENGTH_SHORT).show();}
                     }
                 });
