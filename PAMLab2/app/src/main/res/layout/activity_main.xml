@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="stasbizdiga.pamlab2.MainActivity">
+
+    <CalendarView
+        android:id="@+id/simpleCalendarView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:firstDayOfWeek="2"
+        android:maxDate="01/01/2022"
+        android:minDate="01/01/2012"
+        android:scrollbars="vertical"
+        android:selectedWeekBackgroundColor="?android:attr/textColorHintInverse"
+        android:unfocusedMonthDateColor="@android:color/holo_orange_dark"
+        android:weekNumberColor="@color/colorPrimary"
+        android:weekSeparatorLineColor="@android:color/background_light" />
+</RelativeLayout>
