@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PAMLab2</string>
+    <string name="title_activity_alarm_service">AlarmService</string>
 </resources>

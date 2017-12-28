@@ -12,15 +12,16 @@
     <CalendarView
         android:id="@+id/simpleCalendarView"
         android:layout_width="300dp"
-        android:layout_height="350dp"
+        android:layout_height="330dp"
         android:firstDayOfWeek="2"
-        android:maxDate="01/01/2020"
-        android:minDate="01/01/2017"
+        android:maxDate="01.01.2019"
+        android:minDate="01.01.2017"
         android:selectedWeekBackgroundColor="?android:attr/textColorHintInverse"
-        android:unfocusedMonthDateColor="@color/colorLGrey"
         android:showWeekNumber="false"
+        android:unfocusedMonthDateColor="@color/colorLGrey"
         android:weekSeparatorLineColor="@android:color/background_light"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/editTextSearch"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -58,17 +59,16 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="Search.."
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/btnAdd"
-        android:layout_alignStart="@+id/btnAdd" />
+        android:hint="Search.."
+        android:layout_marginTop="25dp"
+        android:layout_alignStart="@+id/simpleCalendarView" />
 
     <Button
         android:id="@+id/btnSearch"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="Search"
-        android:layout_alignTop="@+id/editTextSearch"
+        android:layout_marginTop="25dp"
         android:layout_toEndOf="@+id/editTextSearch" />
 
 </RelativeLayout>

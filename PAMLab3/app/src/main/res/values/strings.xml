@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PAMLab3</string>
+    <array name="feed_names">
+        <item>https://news.yam.md/ro/rss</item>
+        <item>https://news.yam.md/ru/rss</item>
+        <item>https://news.yam.md/en/rss</item>
+    </array>
+</resources>
